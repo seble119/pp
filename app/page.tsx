@@ -53,7 +53,6 @@ export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
-  const [isPlaying, setIsPlaying] = useState(false)
   const [searchQuery, setSearchQuery] = useState("")
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [isPending, startTransition] = useTransition()
@@ -455,17 +454,21 @@ export default function Portfolio() {
             <div className="space-y-6">
               <h3 className="text-3xl font-semibold mb-4">Hello! I'm Seble H/mariam 👋</h3>
               <p className={`leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
-                I'm a passionate Full Stack Developer dedicated to creating digital solutions that make a difference. My
+                {
+                  "I'm a passionate Full Stack Developer dedicated to creating digital solutions that make a difference. My"
+                }
                 journey began with a curiosity about how websites work, and it has evolved into a deep love for crafting
                 exceptional user experiences.
               </p>
               <p className={`leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
-                I specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms. I
+                {"I specialize in modern web technologies including React, Next.js, Node.js, and cloud platforms. I"}
                 believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and
                 best practices.
               </p>
               <p className={`leading-relaxed ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
+                {
+                  "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,"
+                }
                 or sharing my knowledge through blog posts and mentoring other developers.
               </p>
 
@@ -515,7 +518,7 @@ export default function Portfolio() {
                 </Button>
                 <Button variant="outline" onClick={() => scrollToSection("contact")}>
                   <Coffee className="mr-2 h-4 w-4" />
-                  Let's Chat
+                  {"Let's Chat"}
                 </Button>
               </div>
             </div>
@@ -532,7 +535,7 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Skills & Technologies</h2>
             <p className={`max-w-2xl mx-auto ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-              Here are the technologies and tools I work with to bring ideas to life.
+              {"Here are the technologies and tools I work with to bring ideas to life."}
             </p>
           </div>
 
@@ -837,7 +840,7 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">What Clients Say</h2>
             <p className={`max-w-2xl mx-auto ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-              Don't just take my word for it. Here's what my clients have to say about working with me.
+              {"Don't just take my word for it. Here's what my clients have to say about working with me."}
             </p>
           </div>
 
@@ -856,9 +859,7 @@ export default function Portfolio() {
 
                   <Quote className="h-8 w-8 text-blue-600 mb-4" />
 
-                  <p className={`mb-6 italic ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
-                    "{testimonial.content}"
-                  </p>
+                  <p className={`mb-6 italic ${darkMode ? "text-gray-300" : "text-gray-600"}`}>{testimonial.content}</p>
 
                   <div className="flex items-center space-x-4">
                     <Avatar>
@@ -890,8 +891,8 @@ export default function Portfolio() {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4">Get In Touch</h2>
             <p className={`max-w-2xl mx-auto ${darkMode ? "text-gray-400" : "text-gray-600"}`}>
-              I'm always open to discussing new opportunities, interesting projects, or just having a chat about
-              technology. Let's create something amazing together!
+              {"I'm always open to discussing new opportunities, interesting projects, or just having a chat about"}
+              {"technology. Let's create something amazing together!"}
             </p>
           </div>
 
@@ -988,7 +989,7 @@ export default function Portfolio() {
                     <CheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
                     <p className={darkMode ? "text-gray-300" : "text-gray-600"}>
-                      Thank you for reaching out. I'll get back to you within 24 hours!
+                      {"Thank you for reaching out. I'll get back to you within 24 hours!"}
                     </p>
                   </div>
                 ) : (
@@ -1016,7 +1017,12 @@ export default function Portfolio() {
 
                     <div className="mb-6">
                       <label className="text-sm font-medium mb-2 block">Message</label>
-                      <Textarea rows={4} name="message" placeholder="Tell me about your project or idea..." required />
+                      <Textarea
+                        rows={4}
+                        name="message"
+                        placeholder={"Tell me about your project or idea..."}
+                        required
+                      />
                     </div>
 
                     <Button
